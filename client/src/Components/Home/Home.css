@@ -1,0 +1,172 @@
+/* Existing styles remain unchanged... */
+
+.home-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #0f0c29; /* Deep purple/navy base */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero {
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00fff0, #00ff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem;
+  color: #ccc;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.glow-button {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #00ffc3;
+  color: #000;
+  box-shadow: 0 0 20px #00ffc3, 0 0 40px #00ffc3;
+  transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+  background: #00bfa6;
+  box-shadow: 0 0 25px #00ffc3, 0 0 60px #00ffc3;
+  transform: scale(1.05);
+}
+
+/* NEW: Animated particle background */
+.animated-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.animated-bg span {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 255, 255, 0.2);
+  animation: animateParticles 20s linear infinite;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+@keyframes animateParticles {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Randomized styles for particles */
+.animated-bg span:nth-child(odd) {
+  background: rgba(0, 255, 255, 0.4);
+  width: 15px;
+  height: 15px;
+  animation-duration: 25s;
+}
+
+/* ---- Glowing Light Beams ---- */
+.glow-beams {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.beam {
+  position: absolute;
+  width: 4px;
+  height: 100vh;
+  background: linear-gradient(to top, #00fff0, transparent);
+  animation: beamMove 10s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes beamMove {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0.6;
+  }
+}
+
+.beam:nth-child(odd) {
+  background: linear-gradient(to top, #00ff88, transparent);
+  animation-duration: 12s;
+  opacity: 0.3;
+}
+
+/* ---- Floating Text Effect ---- */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00fff0, #00ff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: floatText 5s ease-in-out infinite;
+}
+
+@keyframes floatText {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ---- Button Float Hover ---- */
+.glow-button {
+  transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.glow-button:hover {
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* ---- Gradient Overlay for Depth ---- */
+.home-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent, #0f0c29);
+  z-index: 1;
+  pointer-events: none;
+}

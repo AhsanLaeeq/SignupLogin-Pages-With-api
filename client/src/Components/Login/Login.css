@@ -1,0 +1,75 @@
+/* Login.css */
+.login-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #2c3e50, #000);
+  animation: fadeInBg 1.5s ease-in-out;
+}
+
+@keyframes fadeInBg {
+  0% { opacity: 0; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.login-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+  color: white;
+  backdrop-filter: blur(10px);
+  animation: floatLogin 4s ease-in-out infinite;
+}
+
+@keyframes floatLogin {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00ffff;
+}
+
+.login-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #1f1f1f;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.login-form input::placeholder {
+  color: #aaa;
+}
+
+.login-form input:focus {
+  background: #2c2c2c;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.glow-button {
+  background: #00ffff;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+.glow-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+}

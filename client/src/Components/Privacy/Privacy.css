@@ -1,0 +1,174 @@
+/* Privacy.css - neon glass style, readable layout */
+
+.privacy-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at 10% 10%, #0f1720, #0b1020 40%, #05060a 100%);
+  color: #ddd;
+  padding: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hero */
+.privacy-hero {
+  text-align: center;
+  margin-bottom: 24px;
+  animation: heroFade 0.9s ease;
+}
+.privacy-hero h1 {
+  font-size: 2.2rem;
+  color: #00ffff;
+  text-shadow: 0 0 18px rgba(0,255,255,0.12);
+}
+.privacy-hero p {
+  color: #bfc9d6;
+  margin-top: 6px;
+}
+
+/* Layout */
+.privacy-content {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Table of contents */
+.toc {
+  width: 220px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(0,255,255,0.06);
+  padding: 18px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 24px rgba(0,255,255,0.03);
+  position: sticky;
+  top: 24px;
+  height: fit-content;
+}
+.toc h3 {
+  margin: 0 0 6px 0;
+  color: #aefcff;
+}
+.toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.toc li {
+  margin: 8px 0;
+}
+.toc a {
+  color: #cfeff0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.toc a:hover {
+  color: #00ffff;
+  transform: translateX(6px);
+}
+
+/* Main panel */
+.policy-panel {
+  flex: 1;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,255,255,0.04);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+}
+
+/* Section */
+.policy-section {
+  margin-bottom: 18px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.section-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(90deg, rgba(0,255,255,0.03), transparent);
+  border: none;
+  padding: 12px 14px;
+  cursor: pointer;
+  color: #e6f8f7;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+.section-toggle:hover {
+  background: linear-gradient(90deg, rgba(0,255,255,0.06), transparent);
+  transform: translateX(4px);
+}
+.chev {
+  color: #00ffff;
+  font-weight: 700;
+  margin-right: 6px;
+}
+.section-title {
+  font-size: 1rem;
+}
+
+/* Body */
+.section-body {
+  padding: 12px 14px;
+  color: #c9d6dd;
+  line-height: 1.6;
+  background: rgba(0,0,0,0.25);
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.02);
+}
+
+/* Links inside */
+.section-body a {
+  color: #9ffcf5;
+  text-decoration: underline;
+}
+.section-body ul {
+  padding-left: 18px;
+  margin: 8px 0;
+}
+.section-body li {
+  margin: 6px 0;
+}
+
+/* Footer */
+.policy-footer {
+  margin-top: 18px;
+  text-align: right;
+  color: #98bfc0;
+}
+
+/* Small screens */
+@media (max-width: 900px) {
+  .privacy-content {
+    flex-direction: column;
+    padding: 0 12px;
+  }
+  .toc {
+    width: 100%;
+    position: relative;
+    top: auto;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+  }
+  .toc ul {
+    display: flex;
+    gap: 12px;
+  }
+  .policy-panel {
+    padding: 16px;
+  }
+}
+
+/* Animations */
+@keyframes heroFade {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
