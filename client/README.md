@@ -1,3 +1,8 @@
+Here’s a clean and attractive **README.md** for your GitHub repo with your **auth-app** structure, explanations, and your LinkedIn link.
+
+---
+
+```markdown
 # 🔐 Auth App – MERN Authentication System
 
 A **full-stack authentication application** built with the **MERN stack** (MongoDB, Express.js, React, Node.js).  
@@ -7,13 +12,13 @@ This project demonstrates **secure user signup, login, and authentication** usin
 
 ## 📂 Project Structure
 
-auth-app/
-├── client/ # React frontend (UI & client-side logic)
-└── api/ # Express backend (API & authentication logic)
+```
 
-yaml
-Copy
-Edit
+auth-app/
+├── client/       # React frontend (UI & client-side logic)
+└── api/           # Express backend (API & authentication logic)
+
+````
 
 ---
 
@@ -57,47 +62,66 @@ Edit
 ```bash
 git clone https://github.com/YOUR-USERNAME/auth-app.git
 cd auth-app
-2️⃣ Install dependencies for backend
-bash
-Copy
-Edit
+````
+
+### 2️⃣ Install dependencies for backend
+
+```bash
 cd api
 npm install
-3️⃣ Install dependencies for frontend
-bash
-Copy
-Edit
+```
+
+### 3️⃣ Install dependencies for frontend
+
+```bash
 cd ../client
 npm install
-4️⃣ Environment Variables
-Create a .env file inside the ap/ folder and add:
+```
 
-init
-Copy
-Edit
+### 4️⃣ Environment Variables
+
+Create a `.env` file inside the **ap/** folder and add:
+
+```
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 PORT=5000
-5️⃣ Run the backend server
-bash
-Copy
-Edit
+```
+
+### 5️⃣ Run the backend server
+
+```bash
 cd api
 npm start
-6️⃣ Run the frontend
-bash
-Copy
-Edit
+```
+
+### 6️⃣ Run the frontend
+
+```bash
 cd ../client
 npm start
-📌 Usage
-Open http://localhost:3000/ to access the React frontend.
+```
 
-Backend runs on http://localhost:5000/.
+---
 
-📜 License
-This project is open-source and free to use under the MIT License.
+## 📌 Usage
 
-🤝 Connect with Me
-💼 LinkedIn – Ahsan Laeeq
-🌐 Let’s connect and collaborate!
+* Open **[http://localhost:3000/](http://localhost:3000/)** to access the React frontend.
+* Backend runs on **[http://localhost:5000/](http://localhost:5000/)**.
+
+---
+
+## 📜 License
+
+This project is open-source and free to use under the [MIT License](LICENSE).
+
+---
+
+## 🤝 Connect with Me
+
+💼 [LinkedIn – Ahsan Laeeq](https://www.linkedin.com/in/ahsan-laeeq-22a085348)
+🌐 *Let’s connect and collaborate!*
+
+```
+
+---
